@@ -1,7 +1,8 @@
 <template>
-  <div class="hero">
+  <div class="hero" id="section-one">
     <Title />
-    <Background />
+    <Background v-bind:backgroundColors="this.backgroundColors" v-bind:name="this.name" />
+    <div class="hero-background"></div>
   </div>
 </template>
 
@@ -13,6 +14,12 @@ export default {
   components: {
     Title,
     Background
+  },
+  props: ["backgroundColors"],
+  data() {
+    return {
+      name: "hero"
+    }
   },
   methods: {
     calculatePathLengths() {
@@ -32,8 +39,18 @@ export default {
 
 <style lang="sass">
 @use "../sass/_base"
+.hero
+  height: 100vh
+.hero-background
+  position: absolute
+  top: 0
+  z-index: -2
+  height: 100vh
+  width: 100%
+  background-image: linear-gradient(to top, base.$background, base.$purple)
+  color: base.$lightpink
 .hero #logo
-  z-index: 5
+  z-index: 1
   position: absolute
   max-width: 90%
   top: 50%
@@ -58,8 +75,8 @@ export default {
     stroke-dashoffset: 594px
     animation: line-anim 1s ease forwards 0.3s
   path:nth-child(5)
-    stroke-dasharray: 606px
-    stroke-dashoffset: 606px
+    stroke-dasharray: 607px
+    stroke-dashoffset: 607px
     animation: line-anim 1s ease forwards 0.4s
   path:nth-child(6)
     stroke-dasharray: 588px
