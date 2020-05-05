@@ -1,5 +1,5 @@
 <template>
-  <div class="projects-container" id="section-three">
+  <div class="projects-container" id="projects">
     <Background class="projects-clouds" v-bind:backgroundColors="this.backgroundColors" v-bind:name="this.name" />
     <div class="projects-content">
       <h2>Projects</h2>

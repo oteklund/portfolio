@@ -35,4 +35,7 @@ footer
   text-align: right
   ul
     list-style: none
+@media screen and (max-width: 800px)
+  .footer-container
+    display: none
 </style>

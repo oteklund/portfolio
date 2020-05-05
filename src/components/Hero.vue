@@ -1,5 +1,5 @@
 <template>
-  <div class="hero" id="section-one">
+  <div class="hero" id="home" v-on:click="this.scrollToContent">
     <Title />
     <Background v-bind:backgroundColors="this.backgroundColors" v-bind:name="this.name" />
     <div class="hero-background"></div>
@@ -29,10 +29,13 @@ export default {
           `Letter ${i} has a length of ${letters[i].getTotalLength()}`
         );
       }
+    },
+    scrollToContent() {
+      document.querySelector("#about").scrollIntoView()
     }
   },
   mounted() {
-    this.calculatePathLengths();
+    // this.calculatePathLengths();
   }
 };
 </script>

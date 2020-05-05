@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-container" id="section-four">
+  <div class="contact-container" id="contact">
     <div class="contact-background">
       <div class="contact-content">
         <h2>Contact me</h2>
@@ -37,12 +37,16 @@ export default {
     // opacity: 0.5
     box-shadow: inset 0 0 0 1000px transparentize(base.$pink, 0.3)
   .contact-content
+    color: #000c
     width: 80%
-    padding: 30px
+    max-width: 600px
+    padding-top: 10vh
+    margin-left: 15vw
     ul
       font-family: base.$sans-serif
       margin: auto
       padding: 30px
+      font-size: 1.3rem
       li
         margin: 50px auto
 </style>
