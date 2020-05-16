@@ -1,16 +1,16 @@
 <template>
-  <div class="about-menu-container" >
-    <div class="about-menu about-hidden" v-on:click="this.openAboutMenu">
+  <div class="about-menu-container">
+    <div class="about-menu about-hidden" v-on:click="this.toggleAboutMenu">
       <p class="tab-text">topics</p>
       <ul class="projects-list">
         <li
-          v-for="topic in this.topics"
+          v-for="(topic, index) in this.topics"
           v-on:click="$emit('select-content', topic)"
-          v-bind:key="topic.id"
-        >{{topic.name}}</li>
+          v-bind:key="index"
+        >{{topic}}</li>
       </ul>
     </div>
-    <div class="about-burger" v-on:click="this.openAboutMenu">
+    <div class="about-burger" v-on:click="this.toggleAboutMenu">
       <div class="about-burger-line-1"></div>
       <div class="about-burger-line-2"></div>
       <div class="about-burger-line-3"></div>
@@ -24,44 +24,30 @@ export default {
   data() {
     return {
       aboutMenuIsActive: false,
-      topics: [
-        {
-          name: "education",
-          id: 1,
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ab beatae quos est cumque laboriosam iusto fugiat sit vitae accusantium suscipit tempora ad iure, rem, eligendi provident ducimus veniam harum neque voluptas! Adipisci eligendi ipsam illum suscipit harum officiis quo, numquam, cumque nostrum debitis quaerat, hic repudiandae libero cum ad. Odio enim maxime quia? Officia id aut neque amet animi sapiente facilis repellat voluptas cum minima culpa nulla quos earum quo assumenda dignissimos molestiae, delectus distinctio ab ad veritatis quas beatae quasi eaque! Fuga repellat temporibus dolorum porro velit quam. Ipsam dolore, numquam vero laboriosam mollitia eaque ea est amet nihil beatae quae iure ipsum neque fuga! Quibusdam explicabo ea consequuntur expedita quae reprehenderit mollitia, fugiat quam impedit officia in blanditiis atque quidem magni incidunt nulla illum tempora obcaecati est officiis voluptate deleniti corporis nobis vero. Vel odio, asperiores non eligendi nihil autem quas rem nesciunt ut provident reprehenderit maxime facilis sapiente perspiciatis, perferendis voluptate culpa dignissimos nulla cumque iste officiis minima, ex temporibus dicta! Suscipit, sapiente cum. Tempore architecto dolore necessitatibus, modi numquam, nam quia magni natus, omnis deleniti laboriosam atque similique voluptatum. Aut adipisci laborum error impedit quaerat saepe repellendus, sapiente omnis dolor excepturi fuga tempore, quisquam esse."
-        },
-        {
-          name: "tech stack",
-          id: 2,
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ab beatae quos est cumque laboriosam iusto fugiat sit vitae accusantium suscipit tempora ad iure, rem, eligendi provident ducimus veniam harum neque voluptas! Adipisci eligendi ipsam illum suscipit harum officiis quo, numquam, cumque nostrum debitis quaerat, hic repudiandae libero cum ad. Odio enim maxime quia? Officia id aut neque amet animi sapiente facilis repellat voluptas cum minima culpa nulla quos earum quo assumenda dignissimos molestiae, delectus distinctio ab ad veritatis quas beatae quasi eaque! Fuga repellat temporibus dolorum porro velit quam. Ipsam dolore, numquam vero laboriosam mollitia eaque ea est amet nihil beatae quae iure ipsum neque fuga! Quibusdam explicabo ea consequuntur expedita quae reprehenderit mollitia, fugiat quam impedit officia in blanditiis atque quidem magni incidunt nulla illum tempora obcaecati est officiis voluptate deleniti corporis nobis vero. Vel odio, asperiores non eligendi nihil autem quas rem nesciunt ut provident reprehenderit maxime facilis sapiente perspiciatis, perferendis voluptate culpa dignissimos nulla cumque iste officiis minima, ex temporibus dicta! Suscipit, sapiente cum. Tempore architecto dolore necessitatibus, modi numquam, nam quia magni natus, omnis deleniti laboriosam atque similique voluptatum. Aut adipisci laborum error impedit quaerat saepe repellendus, sapiente omnis dolor excepturi fuga tempore, quisquam esse."
-        },
-        {
-          name: "work experience",
-          id: 3,
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ab beatae quos est cumque laboriosam iusto fugiat sit vitae accusantium suscipit tempora ad iure, rem, eligendi provident ducimus veniam harum neque voluptas! Adipisci eligendi ipsam illum suscipit harum officiis quo, numquam, cumque nostrum debitis quaerat, hic repudiandae libero cum ad. Odio enim maxime quia? Officia id aut neque amet animi sapiente facilis repellat voluptas cum minima culpa nulla quos earum quo assumenda dignissimos molestiae, delectus distinctio ab ad veritatis quas beatae quasi eaque! Fuga repellat temporibus dolorum porro velit quam. Ipsam dolore, numquam vero laboriosam mollitia eaque ea est amet nihil beatae quae iure ipsum neque fuga! Quibusdam explicabo ea consequuntur expedita quae reprehenderit mollitia, fugiat quam impedit officia in blanditiis atque quidem magni incidunt nulla illum tempora obcaecati est officiis voluptate deleniti corporis nobis vero. Vel odio, asperiores non eligendi nihil autem quas rem nesciunt ut provident reprehenderit maxime facilis sapiente perspiciatis, perferendis voluptate culpa dignissimos nulla cumque iste officiis minima, ex temporibus dicta! Suscipit, sapiente cum. Tempore architecto dolore necessitatibus, modi numquam, nam quia magni natus, omnis deleniti laboriosam atque similique voluptatum. Aut adipisci laborum error impedit quaerat saepe repellendus, sapiente omnis dolor excepturi fuga tempore, quisquam esse."
-        },
-        {
-          name: "personality",
-          id: 4,
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ab beatae quos est cumque laboriosam iusto fugiat sit vitae accusantium suscipit tempora ad iure, rem, eligendi provident ducimus veniam harum neque voluptas! Adipisci eligendi ipsam illum suscipit harum officiis quo, numquam, cumque nostrum debitis quaerat, hic repudiandae libero cum ad. Odio enim maxime quia? Officia id aut neque amet animi sapiente facilis repellat voluptas cum minima culpa nulla quos earum quo assumenda dignissimos molestiae, delectus distinctio ab ad veritatis quas beatae quasi eaque! Fuga repellat temporibus dolorum porro velit quam. Ipsam dolore, numquam vero laboriosam mollitia eaque ea est amet nihil beatae quae iure ipsum neque fuga! Quibusdam explicabo ea consequuntur expedita quae reprehenderit mollitia, fugiat quam impedit officia in blanditiis atque quidem magni incidunt nulla illum tempora obcaecati est officiis voluptate deleniti corporis nobis vero. Vel odio, asperiores non eligendi nihil autem quas rem nesciunt ut provident reprehenderit maxime facilis sapiente perspiciatis, perferendis voluptate culpa dignissimos nulla cumque iste officiis minima, ex temporibus dicta! Suscipit, sapiente cum. Tempore architecto dolore necessitatibus, modi numquam, nam quia magni natus, omnis deleniti laboriosam atque similique voluptatum. Aut adipisci laborum error impedit quaerat saepe repellendus, sapiente omnis dolor excepturi fuga tempore, quisquam esse."
-        }
-      ]
+      topics: ["introduction", "tech stack", "education", "work experience", "about me"]
     };
   },
   methods: {
-    openAboutMenu() {
-      const menu = document.querySelector(".about-menu")
-      this.aboutMenuIsActive = !this.aboutMenuIsActive
+    toggleAboutMenu() {
+      const menu = document.querySelector(".about-menu");
+      const tabText = document.querySelector(".tab-text");
       if (this.aboutMenuIsActive) {
-        menu.classList.remove("about-hidden")
+        menu.classList.add("about-hidden");
+        menu.style.zIndex = 2;
+        tabText.style.filter = "none";
+        document
+          .querySelector(".about-content")
+          .removeEventListener("click", this.toggleAboutMenu);
       } else {
-        menu.classList.add("about-hidden")
+        menu.classList.remove("about-hidden");
+        menu.style.zIndex = 3;
+        tabText.style.filter = "drop-shadow(0px 0px 2px white)";
+        document
+          .querySelector(".about-content")
+          .addEventListener("click", this.toggleAboutMenu);
       }
-    },
+      this.aboutMenuIsActive = !this.aboutMenuIsActive;
+    }
   }
 };
 </script>
@@ -74,7 +60,7 @@ export default {
   width: 300px
   max-width: 70%
   left: 0
-  z-index: 4
+  z-index: 2
 .tab-text
   font-weight: bold
   font-size: 20px
@@ -94,12 +80,11 @@ export default {
   background: linear-gradient(to bottom, transparentize(base.$pink, 0.4 ), transparentize(base.$violet, 0.4 ))
   top: 0px
   transition: 0.3s
-  // &:hover
-  //   transform: translateX(0%)
 .about-hidden
-    transform: translateX(-90%)
+  transform: translateX(-90%)
 .projects-list
-  margin: 50px 25px
+  margin: 50px 20
+  padding: 0 5px
   width: 100%
   font-family: base.$sans-serif
   color: base.$lightblue
@@ -125,6 +110,8 @@ export default {
   background: base.$lightpurple
   margin: 4px
 @media screen and (max-width: 800px)
+  .about-menu-container
+    z-index: 2
   .about-menu
     background: linear-gradient(to bottom, transparentize(base.$pink, 0.05 ), transparentize(base.$violet, 0.05 ))
 @media screen and (max-width: 700px)
@@ -136,5 +123,6 @@ export default {
   .tab-text
     display: none
   .about-burger
-    display: block 
+    display: block
+    z-index: -1
 </style>

@@ -69,6 +69,9 @@ nav
       font-family: base.$monospace
       color: transparentize(base.$lightblue, 0.2)
       font-size: 22px
+      &:hover
+        color: opacify(base.$lightblue, 1 )
+        filter: drop-shadow(0px 1px 3px white)
 .burger
   cursor: pointer
   position: absolute
@@ -97,6 +100,11 @@ nav
       width: 100%
       height: 100vh
       flex-direction: column
+      li
+        padding: 45px
+      a
+        width: 100%
+        text-align: center
   .hidden
     visibility: hidden
     opacity: 0

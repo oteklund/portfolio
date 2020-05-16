@@ -22,6 +22,7 @@ export default {
 .footer-container
   width: 100%
   position: absolute
+  z-index: 2
 footer
   padding: 10px
   width: 100%

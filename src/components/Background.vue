@@ -3,7 +3,9 @@
     <div :id="this.cloudId"></div>
     <svg width="0">
       <filter :id="filterId">
-        <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+        <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10">
+          <!-- <animate attributeName="baseFrequency" calcMode="paced" begin="0s" dur="120s" values=".01;.015;.01;" repeatCount="indefinite"/> -->
+        </feTurbulence>
         <feDisplacementMap in="SourceGraphic" scale="240" />
       </filter>
     </svg>

@@ -1,7 +1,9 @@
 <template>
   <div class="hero" id="home" v-on:click="this.scrollToContent">
     <Title />
-    <Background v-bind:backgroundColors="this.backgroundColors" v-bind:name="this.name" />
+    <Parallax :speedFactor="0.2" breakpoint="(min-width: 80px)" :sectionHeight="100">
+      <Background v-bind:backgroundColors="this.backgroundColors" v-bind:name="this.name" />
+    </Parallax>
     <div class="hero-background"></div>
   </div>
 </template>
@@ -9,11 +11,13 @@
 <script>
 import Title from "./Title.vue";
 import Background from "./Background.vue";
+import Parallax from 'vue-parallaxy'
 export default {
   name: "Hero",
   components: {
     Title,
-    Background
+    Background,
+    Parallax
   },
   props: ["backgroundColors"],
   data() {

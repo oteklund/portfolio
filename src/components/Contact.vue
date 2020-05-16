@@ -2,11 +2,11 @@
   <div class="contact-container" id="contact">
     <div class="contact-background">
       <div class="contact-content">
-        <h2>Contact me</h2>
+        <h2>Contact</h2>
         <ul>
           <li><b>email</b> | ottoeklund@gmail.com</li>
           <li><b>mobile</b> | (+358) 40 552 4403</li>
-          <li><b>linkedin</b> | https://bit.ly/2YuMjPy</li>
+          <li><b>linkedin</b> | <a href="https://bit.ly/2YuMjPy">https://bit.ly/2YuMjPy</a></li>
         </ul>
       </div>
     </div>
@@ -46,7 +46,7 @@ export default {
       font-family: base.$sans-serif
       margin: auto
       padding: 30px
-      font-size: 1.3rem
+      font-size: 1.2rem
       li
         margin: 50px auto
 </style>
