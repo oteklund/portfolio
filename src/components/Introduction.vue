@@ -4,10 +4,10 @@
       <h3>introduction</h3>
       <section>
         <h4>Otto Eklund</h4>
-        <h5>Web Developer</h5>
+        <h5 id="introduction-subtitle">Web Developer</h5>
         <p>Hello! My name is Otto Eklund and I'm in the process of starting a career as a web developer. I love working with Vue and React and enjoy learning new things. I am currently looking for work, so if you are looking for a new team member, let me know!</p>
         <p>To learn more, select one of the topics from the menu. Thanks for visiting!</p>
-        <h5>
+        <h5 style="margin-top: 20px">
           <em>-Otto</em>
         </h5>
       </section>
@@ -48,9 +48,17 @@ export default {
       font-family: base.$sans-serif
       color: base.$pink
       margin-bottom: 10px
+    #introduction-subtitle
+      margin-bottom: 15%
     section
       margin: 25px
-@media screen and (max-width: 600px)
+@media screen and (max-aspect-ratio: 2/3)
   .introduction-container
-    background-size: cover
+    background-position-x: center
+@media screen and (max-height: 700px)
+  .introduction-container
+    margin: 15px auto
+    .introduction-content
+      #introduction-subtitle
+        margin-bottom: 10px
 </style>

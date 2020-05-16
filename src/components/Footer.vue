@@ -39,4 +39,11 @@ footer
 @media screen and (max-width: 800px)
   .footer-container
     display: none
+@media screen and (max-height: 500px)
+  footer
+    height: 30px
+    ul
+      display: flex
+      align-items: center
+      justify-content: space-evenly
 </style>

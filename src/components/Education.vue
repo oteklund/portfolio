@@ -45,12 +45,7 @@ export default {
       margin-bottom: 10px
     p
       margin: 15px auto
-@media screen and (max-height: 800px)
+@media screen and (max-height: 700px)
   .education-container
-    // max-width: 80%
-    // .education-content
-    //   display: flex
-    //   justify-content: space-between
-    //   section
-    //     max-width: 48%
+    margin: 15px auto
 </style>

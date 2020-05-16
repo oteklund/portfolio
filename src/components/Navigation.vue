@@ -17,9 +17,7 @@
       </ul>
     </nav>
     <div class="burger" v-on:click="this.toggleNav">
-      <div id="burger-line-1"></div>
-      <div id="burger-line-2"></div>
-      <div id="burger-line-3"></div>
+      <font-awesome-icon id="compass" :icon="['fas', 'compass']" />
     </div>
   </div>
 </template>
@@ -55,11 +53,12 @@ export default {
   z-index: 3
   width: 100%
 nav
-  background: #3333
+  background: #0005
   overflow: hidden
   width: 70%
   margin: auto
   #navlinks
+    position: relative
     display: flex
     justify-content: space-evenly
     align-items: center
@@ -75,33 +74,32 @@ nav
 .burger
   cursor: pointer
   position: absolute
-  padding: 7px 15px
-  border-radius: 50%
   display: none
   right: 15px
   top: 15px
-  background: #8888
-.burger div
+#compass
+  font-size: 3rem
+  color: transparentize(base.$blue, 0.5) 
+  background: transparentize(base.$lightpurple, 0.5)
   border-radius: 50%
-  width: 3px
-  height: 3px
-  background: base.$lightpurple
-  margin: 4px
 @media screen and (max-width: 800px)
   .nav-container
     top: 0
+    z-index: 4
   .burger
     display: block
+    z-index: 5
   nav
     width: 100%
     transition: visibility 0s, opacity 0.2s ease
     #navlinks
       background: transparentize(base.$background, 0.2)
+      z-index: 4
       width: 100%
       height: 100vh
       flex-direction: column
       li
-        padding: 45px
+        max-padding: 45px
       a
         width: 100%
         text-align: center

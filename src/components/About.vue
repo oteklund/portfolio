@@ -6,6 +6,8 @@
       <Introduction v-if="this.selected === 'introduction'" />
       <Education v-if="this.selected === 'education'" />
       <TechStack v-if="this.selected === 'tech stack'" />
+      <Skills v-if="this.selected === 'skills'" />
+      <AboutMe v-if="this.selected === 'about me'" />
     </div>
   </div>
 </template>
@@ -15,13 +17,17 @@ import AboutMenu from "./AboutMenu.vue";
 import Introduction from './Introduction.vue'
 import Education from './Education.vue'
 import TechStack from './TechStack.vue'
+import Skills from './Skills.vue'
+import AboutMe from './AboutMe.vue'
 export default {
   name: "About",
   components: {
     AboutMenu,
     Introduction,
     Education,
-    TechStack
+    TechStack,
+    Skills,
+    AboutMe
   },
   data() {
     return {
@@ -65,4 +71,7 @@ export default {
       background-color: #7777
       border-radius: 6px
       border: 1px solid transparent
+@media screen and (max-height: 650px)
+  .about-title
+    display: none
 </style>

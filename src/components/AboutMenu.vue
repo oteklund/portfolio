@@ -11,9 +11,7 @@
       </ul>
     </div>
     <div class="about-burger" v-on:click="this.toggleAboutMenu">
-      <div class="about-burger-line-1"></div>
-      <div class="about-burger-line-2"></div>
-      <div class="about-burger-line-3"></div>
+      <font-awesome-icon id="questionmark" :icon="['fas', 'question-circle']" />
     </div>
   </div>
 </template>
@@ -24,7 +22,7 @@ export default {
   data() {
     return {
       aboutMenuIsActive: false,
-      topics: ["introduction", "tech stack", "education", "work experience", "about me"]
+      topics: ["introduction", "tech stack", "education", "skills", "about me"]
     };
   },
   methods: {
@@ -60,7 +58,6 @@ export default {
   width: 300px
   max-width: 70%
   left: 0
-  z-index: 2
 .tab-text
   font-weight: bold
   font-size: 20px
@@ -73,6 +70,8 @@ export default {
   font-family: base.$sans-serif
   text-shadow: 4px 4px 6px base.$purple
 .about-menu
+  position: relative
+  z-index: 3
   padding: 10px
   transform: translateX(0%)
   height: 100%
@@ -97,32 +96,32 @@ export default {
 .about-burger
   cursor: pointer
   position: absolute
-  padding: 7px 15px
-  border-radius: 50%
+  z-index: 2
   display: none
   left: 15px
   top: 15px
-  background: base.$pink
-.about-burger div
+#questionmark
+  font-size: 3rem
+  color: transparentize(base.$lightpurple, 0.5)
+  background-color: transparentize(base.$pink, 0.5)
   border-radius: 50%
-  width: 3px
-  height: 3px
-  background: base.$lightpurple
-  margin: 4px
 @media screen and (max-width: 800px)
-  .about-menu-container
-    z-index: 2
   .about-menu
     background: linear-gradient(to bottom, transparentize(base.$pink, 0.05 ), transparentize(base.$violet, 0.05 ))
 @media screen and (max-width: 700px)
   .about-menu-container
     max-width: 100%
-    z-index: 2
   .about-hidden
     transform: translateX(-100%)
   .tab-text
     display: none
   .about-burger
     display: block
-    z-index: -1
+  .projects-list
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    list-style: none
+    align-items: center
 </style>

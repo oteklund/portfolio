@@ -4,9 +4,9 @@
       <div class="contact-content">
         <h2>Contact</h2>
         <ul>
-          <li><b>email</b> | ottoeklund@gmail.com</li>
-          <li><b>mobile</b> | (+358) 40 552 4403</li>
-          <li><b>linkedin</b> | <a href="https://bit.ly/2YuMjPy">https://bit.ly/2YuMjPy</a></li>
+          <li><b>email</b><br>ottoeklund@gmail.com</li>
+          <li><b>mobile</b><br>(+358) 40 552 4403</li>
+          <li><b>linkedin</b><br><a href="https://bit.ly/2YuMjPy">https://bit.ly/2YuMjPy</a></li>
         </ul>
       </div>
     </div>
@@ -27,7 +27,7 @@ export default {
   overflow: hidden
   .contact-background
     position: relative
-    z-index: 0
+    z-index: 2
     background: url("../assets/tower-of-power.jpg")
     background-size: cover
     height: 100vh
@@ -49,4 +49,8 @@ export default {
       font-size: 1.2rem
       li
         margin: 50px auto
+@media screen and (max-height: 650px)
+  .contact-content 
+    li
+      margin: 10px auto !important
 </style>
