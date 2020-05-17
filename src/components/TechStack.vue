@@ -45,9 +45,9 @@ export default {
       display: flex
       align-items: center
       justify-content: center
-      font-family: base.$sans-serif
-      font-size: 20px
-      font-weight: bold
+      font-family: base.$monospace
+      font-size: 22px
+      font-weight: 500
       transition: transform 0.2s
       &:hover
         transform: scale(0.98)
