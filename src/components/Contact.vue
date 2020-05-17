@@ -4,8 +4,8 @@
       <div class="contact-content">
         <h2>Contact</h2>
         <ul>
-          <li><b>email</b><br>ottoeklund@gmail.com</li>
-          <li><b>mobile</b><br>(+358) 40 552 4403</li>
+          <li><b>email</b><br>ottoeklund(at)gmail.com</li>
+          <!-- <li><b>mobile</b><br>(+358) 40 552 4403</li> -->
           <li><b>linkedin</b><br><a href="https://bit.ly/2YuMjPy">https://bit.ly/2YuMjPy</a></li>
         </ul>
       </div>
