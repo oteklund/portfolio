@@ -1,8 +1,9 @@
 <template>
   <div class="hero" id="home" v-on:click="this.scrollToContent">
-    <Title />
-    <Parallax :speedFactor="0.2" breakpoint="(min-width: 800px)" :sectionHeight="100">
-      <Background v-bind:backgroundColors="this.backgroundColors" v-bind:name="this.name" />
+    <div class="title-wrapper" />
+      <Title />
+    <Parallax :speedFactor="0.2" breakpoint="(min-width: 80px)" direction="down" :sectionHeight="100">
+      <img src="../assets/purpleclouds.jpg" alt="purple clouds">
     </Parallax>
     <div class="hero-background"></div>
   </div>
@@ -10,36 +11,17 @@
 
 <script>
 import Title from "./Title.vue";
-import Background from "./Background.vue";
 import Parallax from 'vue-parallaxy'
 export default {
   name: "Hero",
   components: {
     Title,
-    Background,
     Parallax
   },
-  props: ["backgroundColors"],
-  data() {
-    return {
-      name: "hero"
-    }
-  },
   methods: {
-    calculatePathLengths() {
-      const letters = document.querySelectorAll("#logo path");
-      for (let i = 0; i < letters.length; i++) {
-        console.log(
-          `Letter ${i} has a length of ${letters[i].getTotalLength()}`
-        );
-      }
-    },
     scrollToContent() {
       document.querySelector("#about").scrollIntoView()
     }
-  },
-  mounted() {
-    // this.calculatePathLengths();
   }
 };
 </script>
@@ -51,11 +33,26 @@ export default {
 .hero-background
   position: absolute
   top: 0
-  z-index: -2
+  z-index: -1
   height: 100vh
   width: 100%
-  background-image: linear-gradient(to top, base.$background, base.$purple)
+  background-image: linear-gradient(to top, transparentize(base.$background, 0.6), transparentize(base.$purple, 0.1))
   color: base.$lightpink
+  animation: opacity 4s ease-out
+@keyframes opacity
+  from
+    opacity: 0
+  to
+    opacity: 1
+.title-wrapper
+  position: absolute
+  height: 20%
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  background: #0005
+  animation: opacity 1s ease
 .hero #logo
   z-index: 1
   position: absolute

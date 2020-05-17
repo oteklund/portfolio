@@ -1,10 +1,10 @@
 <template>
   <div class="main">
-    <Hero v-bind:backgroundColors="this.backgroundColors.hero" />
+    <Hero />
     <Navigation />
     <Footer />
     <About/>
-    <Projects v-bind:backgroundColors="this.backgroundColors.projects" />
+    <Projects />
     <Contact />
   </div>
 </template>
@@ -25,24 +25,6 @@ export default {
     Projects,
     Footer,
     Contact
-  },
-  data() {
-    return {
-      colors: {
-        background: "#010326",
-        blue: "#020659",
-        violet: "#4B32A6",
-        purple: "#290640",
-        pink: "#BF5AAE",
-        lightpurple: "#ece0f5",
-        lightpink: "#fde5f9",
-        lightblue: "#eeedfc"
-      },
-      backgroundColors: {
-        hero: ["#29064088", "#4B32A6", "#020659", "#BF5AAE", "#ece0f533", "#01032622"],
-        projects: ["#1118", "#020659", "#fff8", "#eeedfc", "lightyellow"]
-      }
-    }
   }
 };
 </script>
