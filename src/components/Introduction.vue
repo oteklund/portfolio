@@ -5,7 +5,7 @@
       <section>
         <h4>Otto Eklund</h4>
         <h5 id="introduction-subtitle">Web Developer</h5>
-        <p>Hello! My name is Otto and I'm in the process of starting a career as a web developer. I love working with Vue and React and enjoy learning new things. I am currently looking for work, so if you are looking to grow your team, let me know!</p>
+        <p>Hello! My name is Otto and I am starting a career as a web developer. I love working with Vue and React and enjoy learning new things. I am currently looking for work, so if you are looking to grow your team, let me know!</p>
         <p>To learn more, select one of the topics from the menu. Thanks for visiting!</p>
         <h5 style="margin-top: 20px">
           <em>-Otto</em>
@@ -60,13 +60,13 @@ export default {
     .introduction-content
       #introduction-subtitle
         margin-bottom: 10px
-@media screen and (min-width: 1250px)
-  .introduction-container
-    background: transparent
-    .introduction-content
-      background: transparent
-      h3
-        padding: 0
-      #introduction-subtitle
-        margin-bottom: 50px
+// @media screen and (min-width: 1250px)
+//   .introduction-container
+//     background: transparent
+//     .introduction-content
+//       background: transparent
+//       h3
+//         padding: 0
+//       #introduction-subtitle
+//         margin-bottom: 50px
 </style>
