@@ -1,8 +1,9 @@
 <template>
   <div class="projects-container" id="projects">
-  <div class="projects-background-filter"></div>
-    <div class="projects-content">
-      <h2>Projects</h2>
+    <div class="projects-background-filter">
+      <div class="projects-content">
+        <h2>Projects</h2>
+      </div>
     </div>
   </div>
 </template>
@@ -22,10 +23,9 @@ export default {
   background-attachment: fixed
   background-size: cover
   .projects-background-filter
-    position: absolute
+    position: relative
     height: 100%
     width: 100%
-    left: 0
     background: linear-gradient(to bottom, transparentize(#020659, 0.5), #020659)
   .projects-content
     position: relative
