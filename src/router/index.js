@@ -8,7 +8,10 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Main',
-    component: Main
+    component: Main,
+    meta: {
+      title: "Otto Eklund"
+    }
   }
 ]
 
