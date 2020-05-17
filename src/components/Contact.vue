@@ -5,7 +5,6 @@
         <h2>contact</h2>
         <ul>
           <li><b>email</b> ottoeklund(at)gmail.com</li>
-          <li><b>mobile</b>(+358) 40 552 4403</li>
           <li><a href="https://bit.ly/2YuMjPy"><b>linkedin</b></a></li>
           <li><a href="https://www.github.com/oteklund"><b>github</b></a></li>
         </ul>
