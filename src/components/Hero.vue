@@ -2,7 +2,7 @@
   <div class="hero" id="home" v-on:click="this.scrollToContent">
       <Title />
     <Parallax :speedFactor="0.2" breakpoint="(min-width: 80px)" direction="down" :sectionHeight="100">
-      <img src="../assets/purpleclouds.jpg" alt="purple clouds">
+      <img id="hero-clouds" src="../assets/purpleclouds.jpg" alt="purple clouds">
     </Parallax>
     <div class="hero-background"></div>
   </div>
@@ -38,11 +38,8 @@ export default {
   background-image: linear-gradient(to top, transparentize(base.$background, 0.6), transparentize(base.$purple, 0.1))
   color: base.$lightpink
   animation: opacity 4s ease-out
-@keyframes opacity
-  from
-    opacity: 0
-  to
-    opacity: 1
+#hero-clouds
+  animation: grow 4s ease forwards
 .hero #logo
   z-index: 1
   position: absolute
@@ -92,7 +89,11 @@ export default {
     stroke-dasharray: 632px
     stroke-dashoffset: 632px
     animation: line-anim 1s ease forwards 0.9s
-
+@keyframes opacity
+  from
+    opacity: 0
+  to
+    opacity: 1
 @keyframes line-anim
   to
     stroke-dashoffset: 0
@@ -103,4 +104,11 @@ export default {
   to
     fill: base.$lightpurple
     opacity: 1
+@keyframes grow
+  from
+    transform: scale(1)
+    filter: blur(0)
+  to
+    transform: scale(1.05)
+    filter: blur(3px)
 </style>

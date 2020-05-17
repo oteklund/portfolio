@@ -4,9 +4,10 @@
       <div class="contact-content">
         <h2>contact</h2>
         <ul>
-          <li><b>email</b><br>ottoeklund(at)gmail.com</li>
-          <!-- <li><b>mobile</b><br>(+358) 40 552 4403</li> -->
-          <li><b>linkedin</b><br><a href="https://bit.ly/2YuMjPy">https://bit.ly/2YuMjPy</a></li>
+          <li><b>email</b> ottoeklund(at)gmail.com</li>
+          <li><b>mobile</b>(+358) 40 552 4403</li>
+          <li><a href="https://bit.ly/2YuMjPy"><b>linkedin</b></a></li>
+          <li><a href="https://www.github.com/oteklund"><b>github</b></a></li>
         </ul>
       </div>
     </div>
@@ -46,10 +47,14 @@ export default {
     h2
       margin: 30px auto
     ul
+      display: flex
+      flex-direction: column
+
       font-family: base.$sans-serif
       margin: auto
       padding: 30px
       font-size: 1.2rem
+      list-style: none
       li
         margin: 50px auto
 @media screen and (max-height: 650px)
