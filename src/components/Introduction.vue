@@ -32,7 +32,6 @@ export default {
   background: url("../assets/lime.jpg") no-repeat
   background-size: cover
   .introduction-content
-    // backdrop-filter: blur(2px)
     background: linear-gradient(to right, #4B32A6ff, #4B32A6aa)
     width: 100%
     height: 100%
