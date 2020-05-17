@@ -5,6 +5,9 @@
       <img id="hero-clouds" src="../assets/purpleclouds.jpg" alt="purple clouds">
     </Parallax>
     <div class="hero-background"></div>
+    <div class="hero-subtitle">
+      <h3>web development</h3>
+    </div>
   </div>
 </template>
 
@@ -49,6 +52,27 @@ export default {
   animation: opacity 4s ease-out
 #hero-clouds
   animation: grow 4s ease forwards
+.hero-subtitle
+  color: base.$purple
+  pointer-events: none
+  font-size: 3vw
+  position: absolute
+  width: 100%
+  text-align: center
+  top: 70vh
+  left: 50%
+  transform: translateX(-50%)
+  opacity: 0
+  animation: subtitle 2s ease forwards 1.2s
+  &::before
+    position: absolute
+    content: ""
+    width: 100%
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    height: 2em
+    background: transparentize(base.$lightpurple, 0.5)
 .hero #logo
   z-index: 1
   position: absolute
@@ -120,4 +144,9 @@ export default {
   to
     transform: scale(1.05)
     filter: blur(3px)
+@keyframes subtitle
+  from
+    opacity: 0
+  to
+    opacity: 0.8
 </style>
