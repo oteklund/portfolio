@@ -33,7 +33,7 @@ export default {
 .education-container
   max-width: 600px
   max-height: 100%
-  margin: 50px auto
+  margin: 15px auto 50px auto
   text-align: right
   .education-content
     width: 100%

@@ -28,7 +28,7 @@ export default {
   max-width: 600px
   height: 100%
   max-height: 600px
-  margin: 50px auto
+  margin: 15px auto 50px auto
   background: url("../assets/lime.jpg") no-repeat
   background-size: cover
   .introduction-content

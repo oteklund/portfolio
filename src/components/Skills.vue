@@ -41,7 +41,7 @@ export default {
 <style lang="sass">
 @use "../sass/_base"
 .skills-container
-  margin: 50px auto
+  margin: 15px auto 50px auto
   width: 100%
   max-width: 600px
   height: 100%
@@ -50,6 +50,7 @@ export default {
     margin-bottom: 15px
   ul
     margin: 15px auto
+    list-style-position: inside
   li
     margin-bottom: 15px
     font-family: base.$sans-serif

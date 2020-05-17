@@ -51,6 +51,8 @@ export default {
     top: 100%
     content: ""
     background: #0005
+  h3
+    font-family: base.$sans-serif
 .about-content
   margin: auto
   display: flex

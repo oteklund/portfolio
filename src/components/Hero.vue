@@ -20,13 +20,22 @@ export default {
   methods: {
     scrollToContent() {
       document.querySelector("#about").scrollIntoView()
+    },
+    showPage() {
+      document.body.classList.remove("js-loading")
     }
+  },
+  mounted(){
+    document.body.classList.add("js-loading")
+    window.addEventListener("load", this.showPage)
   }
 };
 </script>
 
 <style lang="sass">
 @use "../sass/_base"
+.js-loading *, .js-loading *::before, .js-loading *::after
+  animation-play-state: paused !important
 .hero
   height: 100vh
 .hero-background
@@ -102,7 +111,7 @@ export default {
     fill: transparent
     opacity: 0.5
   to
-    fill: base.$lightpurple
+    fill: transparentize(base.$lightpurple, 0.3)
     opacity: 1
 @keyframes grow
   from
