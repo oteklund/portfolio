@@ -44,13 +44,6 @@ export default {
   height: 100vh
   background: linear-gradient(to bottom, base.$background, base.$violet)
   color: base.$lightblue
-  &::after
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 100%
-    content: ""
-    background: #0005
   h3
     font-family: base.$sans-serif
 .about-content
