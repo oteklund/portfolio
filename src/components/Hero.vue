@@ -1,6 +1,5 @@
 <template>
   <div class="hero" id="home" v-on:click="this.scrollToContent">
-    <div class="title-wrapper" />
       <Title />
     <Parallax :speedFactor="0.2" breakpoint="(min-width: 80px)" direction="down" :sectionHeight="100">
       <img src="../assets/purpleclouds.jpg" alt="purple clouds">
@@ -44,15 +43,6 @@ export default {
     opacity: 0
   to
     opacity: 1
-.title-wrapper
-  position: absolute
-  height: 20%
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-  width: 100%
-  background: #0005
-  animation: opacity 1s ease
 .hero #logo
   z-index: 1
   position: absolute
