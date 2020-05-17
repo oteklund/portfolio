@@ -60,4 +60,13 @@ export default {
     .introduction-content
       #introduction-subtitle
         margin-bottom: 10px
+@media screen and (min-width: 1250px)
+  .introduction-container
+    background: transparent
+    .introduction-content
+      background: transparent
+      h3
+        padding: 0
+      #introduction-subtitle
+        margin-bottom: 50px
 </style>

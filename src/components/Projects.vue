@@ -2,7 +2,7 @@
   <div class="projects-container" id="projects">
     <div class="projects-background-filter">
       <div class="projects-content">
-        <h2>Projects</h2>
+        <h2>projects</h2>
       </div>
     </div>
   </div>
@@ -23,24 +23,19 @@ export default {
   background-attachment: fixed
   background-size: cover
   .projects-background-filter
-    position: relative
+    position: absolute
+    left:0
     height: 100%
     width: 100%
     background: linear-gradient(to bottom, transparentize(#020659, 0.5), #020659)
   .projects-content
-    position: relative
-    z-index: 1
+    padding: 30px
+    display: flex
+    flex-direction: column
     margin: auto
-    height: 90%
-    width: 80%
+    max-height: 10%
+    max-width: 600px
     h2
-      padding-top: 20px
-      text-align: center
+      margin: 30px auto
       color: base.$lightpurple
-.clouds
-  height: 100vh
-  object-fit: cover
-  position: absolute
-  top: 0
-  z-index: -2
 </style>

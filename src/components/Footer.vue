@@ -3,7 +3,7 @@
     <footer>
       <ul>
         <li>Otto Eklund 2020</li>
-        <li>ottoeklund@gmail.com</li>
+        <li>ottoeklund(a)gmail.com</li>
         <li>www.github.com/oteklund</li>
       </ul>
       

@@ -2,7 +2,7 @@
   <div class="about-container" id="about">
     <AboutMenu v-on:select-content="selected = $event" />
     <div class="about-content">
-      <h2 class="about-title">About</h2>
+      <h2 class="about-title">about</h2>
       <Introduction v-if="this.selected === 'introduction'" />
       <Education v-if="this.selected === 'education'" />
       <TechStack v-if="this.selected === 'tech stack'" />
@@ -50,13 +50,11 @@ export default {
   flex-direction: column
   padding: 30px
   background: #3333
-  // width: 90%
   height: 100%
   position: relative
   z-index: 1
   .about-title
     max-width: 600px
-    text-align: right
     margin: 30px auto
 @media screen and (max-width: 600px), (max-height: 800px)
   .about-content

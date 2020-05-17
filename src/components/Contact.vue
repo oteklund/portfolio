@@ -2,7 +2,7 @@
   <div class="contact-container" id="contact">
     <div class="contact-background">
       <div class="contact-content">
-        <h2>Contact</h2>
+        <h2>contact</h2>
         <ul>
           <li><b>email</b><br>ottoeklund(at)gmail.com</li>
           <!-- <li><b>mobile</b><br>(+358) 40 552 4403</li> -->
@@ -34,14 +34,17 @@ export default {
     width: 100%
     filter: blur(0)
     max-width: 200%
-    // opacity: 0.5
     box-shadow: inset 0 0 0 1000px transparentize(base.$pink, 0.3)
   .contact-content
+    padding: 30px
+    margin: auto
+    display: flex
+    flex-direction: column
     color: #000c
-    width: 80%
+    width: 100%
     max-width: 600px
-    padding-top: 10vh
-    margin-left: 15vw
+    h2
+      margin: 30px auto
     ul
       font-family: base.$sans-serif
       margin: auto
