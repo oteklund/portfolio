@@ -5,13 +5,12 @@
       <section>
         <h4>Otto Eklund</h4>
         <h5 id="introduction-subtitle">Web Developer</h5>
-        <p>Hello! My name is Otto Eklund and I'm in the process of starting a career as a web developer. I love working with Vue and React and enjoy learning new things. I am currently looking for work, so if you are looking for a new team member, let me know!</p>
+        <p>Hello! My name is Otto and I'm in the process of starting a career as a web developer. I love working with Vue and React and enjoy learning new things. I am currently looking for work, so if you are looking to grow your team, let me know!</p>
         <p>To learn more, select one of the topics from the menu. Thanks for visiting!</p>
         <h5 style="margin-top: 20px">
           <em>-Otto</em>
         </h5>
       </section>
-      <!-- <img src="../assets/lime.jpg" alt="standing in a green hallway" /> -->
     </div>
   </div>
 </template>

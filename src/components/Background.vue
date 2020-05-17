@@ -3,10 +3,10 @@
     <div :id="this.cloudId"></div>
     <svg width="0">
       <filter :id="filterId">
-        <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10">
+        <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="6" seed="4525">
           <!-- <animate attributeName="baseFrequency" calcMode="paced" begin="0s" dur="120s" values=".01;.015;.01;" repeatCount="indefinite"/> -->
         </feTurbulence>
-        <feDisplacementMap in="SourceGraphic" scale="240" />
+        <feDisplacementMap in="SourceGraphic" scale="180" />
       </filter>
     </svg>
   </div>
@@ -37,8 +37,8 @@ export default {
         shadowOptions.push(`
       ${this.randomNumber(1, 100)}vw 
       ${this.randomNumber(1, 100)}vh 
-      ${this.randomNumber(20, 40)}vmin 
-      ${this.randomNumber(1, 20)}vmin
+      ${this.randomNumber(3, 40)}vmin 
+      ${this.randomNumber(10, 30)}vmin
       ${this.randomColor(this.backgroundColors)}
     `);
       }
@@ -68,5 +68,5 @@ export default {
   overflow: hidden
   width: 1px
   height: 1px
-  border-radius: 50%
+  border-radius: 40%
 </style>

@@ -22,7 +22,13 @@ export default {
   data() {
     return {
       aboutMenuIsActive: false,
-      topics: ["introduction", "tech stack", "education", "skills", "about me"]
+      topics: [
+        "introduction",
+        "tech stack",
+        "education",
+        "skills",
+        // "additional info"
+        ]
     };
   },
   methods: {

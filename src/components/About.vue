@@ -7,7 +7,7 @@
       <Education v-if="this.selected === 'education'" />
       <TechStack v-if="this.selected === 'tech stack'" />
       <Skills v-if="this.selected === 'skills'" />
-      <AboutMe v-if="this.selected === 'about me'" />
+      <AdditionalInfo v-if="this.selected === 'additional info'" />
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@ import Introduction from './Introduction.vue'
 import Education from './Education.vue'
 import TechStack from './TechStack.vue'
 import Skills from './Skills.vue'
-import AboutMe from './AboutMe.vue'
+import AdditionalInfo from './AdditionalInfo.vue'
 export default {
   name: "About",
   components: {
@@ -27,7 +27,7 @@ export default {
     Education,
     TechStack,
     Skills,
-    AboutMe
+    AdditionalInfo
   },
   data() {
     return {

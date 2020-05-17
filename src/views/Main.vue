@@ -39,7 +39,7 @@ export default {
         lightblue: "#eeedfc"
       },
       backgroundColors: {
-        hero: ["#290640", "#4B32A6", "#020659", "#BF5AAE", "#010326"],
+        hero: ["#29064088", "#4B32A6", "#020659", "#BF5AAE", "#ece0f533", "#01032622"],
         projects: ["#1118", "#020659", "#fff8", "#eeedfc", "lightyellow"]
       }
     }
