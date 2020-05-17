@@ -1,7 +1,7 @@
 <template>
   <div class="hero" id="home" v-on:click="this.scrollToContent">
     <Title />
-    <Parallax :speedFactor="0.2" breakpoint="(min-width: 80px)" :sectionHeight="100">
+    <Parallax :speedFactor="0.2" breakpoint="(min-width: 800px)" :sectionHeight="100">
       <Background v-bind:backgroundColors="this.backgroundColors" v-bind:name="this.name" />
     </Parallax>
     <div class="hero-background"></div>
