@@ -40,4 +40,7 @@ export default {
     h2
       margin: 30px auto
       color: base.$lightpurple
+@media screen and (max-width: 700px)
+  .projects-container
+    background-attachment: scroll
 </style>
