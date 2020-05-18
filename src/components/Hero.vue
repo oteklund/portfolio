@@ -112,7 +112,7 @@ export default {
     fill: transparent
     opacity: 0.5
   to
-    fill: transparentize(base.$lightpurple, 0.3)
+    fill: base.$lightpurple
     opacity: 1
 @keyframes grow
   from

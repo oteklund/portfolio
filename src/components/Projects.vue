@@ -17,10 +17,17 @@ export default {
 .projects-container
   height: 100vh
   width: 100%
-  background: url("../assets/whiteclouds.jpg")
-  background-attachment: fixed
-  background-size: cover
-  box-shadow: inset 0 0 0 1000px transparentize(base.$blue, 0.3)
+  background: linear-gradient(to bottom, transparent, base.$blue)
+  &::after
+    content: ""
+    position: absolute
+    z-index: -2
+    top: 200vh
+    width: 100%
+    height: 100%
+    background: url("../assets/whiteclouds.jpg") fixed
+    background-size: cover
+    will-change: transform
   .projects-content
     height: 100%
     position: relative

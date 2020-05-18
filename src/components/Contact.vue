@@ -48,7 +48,7 @@ export default {
     height: 100%
     display: flex
     flex-direction: column
-    color: #000c
+    color: #111c
     max-width: 600px
     h2
       margin: 30px auto
