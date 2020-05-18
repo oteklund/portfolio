@@ -2,18 +2,10 @@
   <div class="nav-container">
     <nav class="hidden" v-on:click="this.toggleNav">
       <ul id="navlinks">
-        <a v-on:click="scrollTo('home')">
-          <li>start</li>
-        </a>
-        <a v-on:click="scrollTo('about')">
-          <li>about</li>
-        </a>
-        <a v-on:click="scrollTo('projects')">
-          <li>projects</li>
-        </a>
-        <a v-on:click="scrollTo('contact')">
-          <li>contact</li>
-        </a>
+        <li v-on:click="scrollTo('home')">start</li>
+        <li v-on:click="scrollTo('about')">about</li>
+        <li v-on:click="scrollTo('projects')">projects</li>
+        <li v-on:click="scrollTo('contact')">contact</li>
       </ul>
     </nav>
     <div class="burger" v-on:click="this.toggleNav">
@@ -33,15 +25,15 @@ export default {
   methods: {
     toggleNav() {
       this.navIsActive = !this.navIsActive;
-      const nav = document.querySelector("nav")
+      const nav = document.querySelector("nav");
       if (this.navIsActive) {
         nav.classList.remove("hidden");
       } else {
-        nav.classList.add("hidden")
+        nav.classList.add("hidden");
       }
     },
     scrollTo(id) {
-      document.getElementById(id).scrollIntoView(true)
+      document.getElementById(id).scrollIntoView(true);
     }
   }
 };
@@ -67,11 +59,12 @@ nav
     align-items: center
     list-style: none
     text-decoration: none
-    li, a
+    li
       font-family: base.$monospace
       color: base.$lightblue
       font-size: 22px
       transition: filter 200ms
+      cursor: pointer
       &:hover
         opacity: 1
         filter: drop-shadow(0px 0px 1px white)
@@ -106,6 +99,7 @@ nav
         max-padding: 45px
       a
         width: 100%
+        cursor: pointer
         text-align: center
   .hidden
     visibility: hidden
