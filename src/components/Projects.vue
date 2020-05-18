@@ -25,7 +25,7 @@ export default {
     top: 0
     width: 100%
     height: 100%
-    background: url("../assets/whiteclouds.jpg")
+    background: url("../assets/whiteclouds.jpg") top center
     background-size: cover
     will-change: transform
     filter: blur(4px)
