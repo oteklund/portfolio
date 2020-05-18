@@ -26,9 +26,8 @@ export default {
     }
   },
   mounted(){
-    const img = document.querySelector("#hero-clouds")
     document.body.classList.add("js-loading")
-    img.addEventListener("load", this.showPage)
+    window.addEventListener("load", this.showPage)
   }
 };
 </script>
