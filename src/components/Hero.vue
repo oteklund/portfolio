@@ -36,6 +36,7 @@ export default {
 @use "../sass/_base"
 .js-loading *, .js-loading *::before, .js-loading *::after
   animation-play-state: paused !important
+  display: none
 .hero
   height: 100vh
 .hero-background

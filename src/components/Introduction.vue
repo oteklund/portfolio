@@ -25,18 +25,11 @@ export default {
 <style lang="sass">
 @use "../sass/_base"
 .introduction-container
-  max-width: 600px
   height: 100%
-  max-height: 600px
   margin: 15px auto 50px auto
-  background: url("../assets/lime.jpg") no-repeat
-  background-size: cover
   .introduction-content
-    background: linear-gradient(to right, #4B32A6ff, #4B32A6aa)
-    width: 100%
-    height: 100%
+    max-width: 600px
     h3
-      padding: 15px
       text-align: right
     height: 100%
     p
@@ -47,16 +40,45 @@ export default {
       color: base.$pink
       margin-bottom: 10px
     #introduction-subtitle
-      margin-bottom: 15%
+      margin-bottom: 30px
     section
-      margin: 25px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin: 30px auto
+      position: relative
+      z-index: 2
+      background: url("../assets/lime.jpg") no-repeat
+      background-size: cover
+      width: 100%
+      max-width: 600px
+      height: 100%
+      max-height: 600px
+      padding: 50px
+      border-radius: 50%
+      &::before
+        content: ""
+        top: 0
+        left: 0
+        position: absolute
+        z-index: -1
+        background: linear-gradient(to right, #4B32A6ff, #4B32A6aa)
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        transition: border-radius 0.3s
+      transition: border-radius 0.3s
 @media screen and (max-aspect-ratio: 2/3)
-  .introduction-container
-    background-position-x: center
+  .introduction-content 
+    section
+      background-position-x: center !important      
 @media screen and (max-height: 700px)
   .introduction-container
     margin: 15px auto
     .introduction-content
       #introduction-subtitle
         margin-bottom: 10px
+@media screen and (max-width: 700px), (max-height: 850px)
+  section, section::before
+    border-radius: 0 !important
 </style>

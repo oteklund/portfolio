@@ -55,6 +55,9 @@ export default {
     margin-bottom: 15px
     font-family: base.$sans-serif
     color: base.$lightblue
+.skills-content
+  margin: 30px auto
+  max-width: 400px
 @media screen and (max-width: 700px)
   .skills-container
     margin: 15px auto

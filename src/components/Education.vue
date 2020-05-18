@@ -40,6 +40,8 @@ export default {
     margin-top: 15px
     text-align: left
     font-family: base.$sans-serif
+    h4
+      margin-top: 30px
     h5
       color: base.$pink
       margin-bottom: 10px
