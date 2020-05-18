@@ -3,11 +3,6 @@
     <div class="projects-content">
       <h2>projects</h2>
       <div class="projects-card">
-        <section>
-          <h4>Hello</h4>
-          <p>
-          </p>
-        </section>
       </div>
     </div>
   </div>
