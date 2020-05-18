@@ -55,7 +55,7 @@ export default {
     ul
       display: flex
       flex-direction: column
-
+      color: base.$lightblue
       font-family: base.$sans-serif
       margin: auto
       padding: 30px
