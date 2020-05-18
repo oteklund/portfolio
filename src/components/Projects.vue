@@ -35,7 +35,6 @@ export default {
     display: flex
     flex-direction: column
     margin: auto
-    max-height: 10%
     max-width: 600px
     h2
       margin: 30px auto
