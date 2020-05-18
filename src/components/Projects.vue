@@ -24,7 +24,7 @@ export default {
     position: absolute
     z-index: 0
     content: ""
-    top: 200%
+    top: 200vh
     height: 100%
     width: 100%
     background: linear-gradient(to bottom, transparentize(#020659, 0.5), #020659)
