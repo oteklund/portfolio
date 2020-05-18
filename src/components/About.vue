@@ -42,7 +42,7 @@ export default {
 .about-container
   width: 100%
   height: 100vh
-  background: linear-gradient(to bottom, base.$background, base.$violet)
+  background: linear-gradient(to bottom, base.$background, darken(base.$violet, 20%))
   color: base.$lightblue
   h3
     font-family: base.$sans-serif
@@ -74,4 +74,9 @@ export default {
 @media screen and (max-height: 650px)
   .about-title
     display: none
+@media screen and (max-height: 1000px)
+  h3
+    display: none
+  .about-title
+    margin-bottom: 15px !important
 </style>

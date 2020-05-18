@@ -68,6 +68,7 @@ export default {
     display: grid
     grid-template-columns: 1fr 1fr 1fr
     gap: 10px
+    max-width: 600px
     li
       list-style: none
 </style>

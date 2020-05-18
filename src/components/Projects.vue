@@ -2,6 +2,13 @@
   <div class="projects-container" id="projects">
     <div class="projects-content">
       <h2>projects</h2>
+      <div class="projects-card">
+        <section>
+          <h4>Hello</h4>
+          <p>
+          </p>
+        </section>
+      </div>
     </div>
   </div>
 </template>
@@ -37,10 +44,15 @@ export default {
     display: flex
     flex-direction: column
     margin: auto
-    max-width: 600px
+    max-width: 1200px
     h2
       margin: 30px auto
       color: base.$lightpurple
+  .projects-card
+    height: 100%
+    width: 100%
+    // color: #000
+    // background: transparentize(base.$lightpurple, 0.5)
 @media screen and (max-width: 1600px)
   .projects-container
     background-attachment: scroll

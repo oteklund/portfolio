@@ -6,7 +6,7 @@
         <h4>Otto Eklund</h4>
         <h5 id="introduction-subtitle">Web Developer</h5>
         <p>Hello! My name is Otto and I am starting a career as a web developer. I love working with Vue and React and enjoy learning new things. I am currently looking for work, so if you are looking to grow your team, let me know!</p>
-        <p>To learn more, select one of the topics from the menu. Thanks for visiting!</p>
+        <p>To learn more, select one of the items from the <span class="introduction-text-highlight">topics menu</span>. Thanks for visiting!</p>
         <h5 style="margin-top: 20px">
           <em>-Otto</em>
         </h5>
@@ -56,10 +56,13 @@ export default {
       max-height: 600px
       padding: 50px
       border-radius: 50%
+      transition: border-radius 0.3s
       &::before
+        padding: 1px
         content: ""
         top: 0
         left: 0
+        transform: translate(-1px, -1px)
         position: absolute
         z-index: -1
         background: linear-gradient(to right, #4B32A6ff, #4B32A6aa)
@@ -67,7 +70,8 @@ export default {
         height: 100%
         border-radius: 50%
         transition: border-radius 0.3s
-      transition: border-radius 0.3s
+      .introduction-text-highlight
+        text-shadow: 0px 0px 4px white
 @media screen and (max-aspect-ratio: 2/3)
   .introduction-content 
     section

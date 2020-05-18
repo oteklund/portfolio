@@ -2,16 +2,16 @@
   <div class="nav-container">
     <nav class="hidden" v-on:click="this.toggleNav">
       <ul id="navlinks">
-        <a href="#home">
+        <a v-on:click="scrollTo('home')">
           <li>start</li>
         </a>
-        <a href="#about">
+        <a v-on:click="scrollTo('about')">
           <li>about</li>
         </a>
-        <a href="#projects">
+        <a v-on:click="scrollTo('projects')">
           <li>projects</li>
         </a>
-        <a href="#contact">
+        <a v-on:click="scrollTo('contact')">
           <li>contact</li>
         </a>
       </ul>
@@ -39,6 +39,9 @@ export default {
       } else {
         nav.classList.add("hidden")
       }
+    },
+    scrollTo(id) {
+      document.getElementById(id).scrollIntoView(true)
     }
   }
 };
@@ -64,13 +67,14 @@ nav
     align-items: center
     list-style: none
     text-decoration: none
-    li
+    li, a
       font-family: base.$monospace
-      color: transparentize(base.$lightblue, 0.2)
+      color: base.$lightblue
       font-size: 22px
+      transition: filter 200ms
       &:hover
-        color: opacify(base.$lightblue, 1 )
-        filter: drop-shadow(0px 1px 3px white)
+        opacity: 1
+        filter: drop-shadow(0px 0px 1px white)
 .burger
   cursor: pointer
   position: absolute
