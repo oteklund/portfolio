@@ -44,10 +44,11 @@ export default {
   .contact-content
     padding: 30px
     margin: auto
+    width: 100%
+    height: 100%
     display: flex
     flex-direction: column
     color: #000c
-    width: 100%
     max-width: 600px
     h2
       margin: 30px auto

@@ -48,6 +48,7 @@ export default {
       font-family: base.$monospace
       font-size: 22px
       transition: transform 0.2s
+      user-select: none
       &:hover
         transform: scale(0.98)
         opacity: 1
