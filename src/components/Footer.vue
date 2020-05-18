@@ -27,23 +27,19 @@ footer
   padding: 10px
   width: 100%
   font-size: 0.8rem
-  color: base.$pink
-  background: linear-gradient(to right, #2222, #5555)
+  color: base.$lightpurple
+  background: linear-gradient(to right, #0002, #0005)
   font-family: "Montserrat", sans-serif
   position: fixed
   bottom: 0
-  height: 60px
+  height: 30px
   text-align: right
   ul
+    display: flex
+    align-items: center
+    justify-content: space-evenly
     list-style: none
 @media screen and (max-width: 800px)
   .footer-container
     display: none
-@media screen and (max-height: 500px)
-  footer
-    height: 30px
-    ul
-      display: flex
-      align-items: center
-      justify-content: space-evenly
 </style>

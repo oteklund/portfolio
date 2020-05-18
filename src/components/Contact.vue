@@ -39,7 +39,6 @@ export default {
     background-size: cover
     height: 100vh
     width: 100%
-    filter: blur(0)
     max-width: 200%
     box-shadow: inset 0 0 0 1000px transparentize(base.$pink, 0.3)
   .contact-content

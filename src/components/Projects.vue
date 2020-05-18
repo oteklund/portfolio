@@ -20,15 +20,9 @@ export default {
   background: url("../assets/whiteclouds.jpg")
   background-attachment: fixed
   background-size: cover
-  &::after
-    position: absolute
-    z-index: 0
-    content: ""
-    top: 200vh
-    height: 100%
-    width: 100%
-    background: linear-gradient(to bottom, transparentize(#020659, 0.5), #020659)
+  box-shadow: inset 0 0 0 1000px transparentize(base.$blue, 0.3)
   .projects-content
+    height: 100%
     position: relative
     z-index: 1
     padding: 30px
@@ -39,7 +33,7 @@ export default {
     h2
       margin: 30px auto
       color: base.$lightpurple
-@media screen and (max-width: 700px)
+@media screen and (max-width: 1600px)
   .projects-container
     background-attachment: scroll
 </style>
