@@ -20,14 +20,15 @@ export default {
   background: linear-gradient(to bottom, transparent, base.$blue)
   &::after
     content: ""
-    position: absolute
+    position: fixed
     z-index: -2
-    top: 200vh
+    top: 0
     width: 100%
     height: 100%
-    background: url("../assets/whiteclouds.jpg") fixed
+    background: url("../assets/whiteclouds.jpg")
     background-size: cover
     will-change: transform
+    filter: blur(4px)
   .projects-content
     height: 100%
     position: relative
