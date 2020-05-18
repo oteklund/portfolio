@@ -20,7 +20,7 @@ export default {
   background: url("../assets/whiteclouds.jpg")
   background-attachment: fixed
   background-size: cover
-  &::before
+  &::after
     position: absolute
     z-index: 0
     content: ""
